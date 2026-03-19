@@ -3,160 +3,296 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Prakhar Mishra | Portfolio</title>
-
     <link rel="stylesheet" href="style.css" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
     />
   </head>
-
   <body>
-    <!-- NAVBAR -->
+    <!-- NOISE OVERLAY -->
+    <div class="noise-overlay"></div>
 
+    <!-- NAVBAR -->
     <header>
       <nav id="navbar">
-        <h2 class="logo">Prakhar</h2>
-
+        <a href="#home" class="logo">PM<span class="logo-dot">.</span></a>
         <ul class="navLinks">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="nav-cta">Contact</a></li>
         </ul>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
     </header>
 
     <!-- HERO SECTION -->
-
     <section id="home" class="hero">
-      <div class="profilePhoto reveal-right">
-        <img src="./images/Profile.jpeg" alt="Profile Photo" />
+      <div class="hero-bg-glow"></div>
+
+      <div class="hero-content">
+        <div class="profilePhoto reveal-scale">
+          <div class="photo-ring"></div>
+          <img src="./images/Profile.jpeg" alt="Prakhar Mishra" />
+        </div>
+
+        <div class="heroText">
+          <p class="hero-label reveal-up" style="--d: 0.1s">
+            — Available for Projects
+          </p>
+          <h1 class="reveal-up" style="--d: 0.2s">
+            Prakhar<br /><em>Mishra</em>
+          </h1>
+          <h2 class="reveal-up" style="--d: 0.3s">B.Tech EE · HBTU Kanpur</h2>
+          <p class="hero-desc reveal-up" style="--d: 0.4s">
+            Aspiring Machine Learning developer building intelligent systems,
+            exploring backend architectures, and turning ideas into real
+            software.
+          </p>
+          <div class="heroButtons reveal-up" style="--d: 0.5s">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a
+              href="resume/Prakhar_Mishra_Resume.pdf"
+              download
+              class="btn btn-ghost"
+            >
+              <i class="fa-solid fa-download"></i> Resume
+            </a>
+          </div>
+        </div>
       </div>
 
-      <div class="heroText reveal-left">
-        <h1>Prakhar Mishra</h1>
-
-        <h2>B.Tech Electrical Engineering HBTU Kanpur</h2>
-
-        <p>
-          Aspiring Machine Learning developer interested in building software
-          systems, working on backend development, and exploring AI
-          technologies.
-        </p>
-
-        <div class="heroButtons">
-          <a href="#projects" class="btn">View Projects</a>
-          <a
-            href="resume/Prakhar_Mishra_Resume.pdf"
-            download="Prakhar_Mishra_Resume.pdf"
-            class="btn"
-          >
-            Download Resume
-          </a>
-        </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
       </div>
     </section>
 
     <!-- ABOUT -->
+    <section id="about" class="about-section">
+      <div class="section-label reveal-up">01 / About</div>
+      <h2 class="sectionTitle reveal-up" style="--d: 0.1s">Who I Am</h2>
 
-    <section id="about" class="reveal">
-      <h2 class="sectionTitle">About Me</h2>
-
-      <p class="aboutText">
-        I am a <b>first-year Electrical Engineering student</b> at
-        <b>HBTU Kanpur</b>. I have hands-on experience with <b>HTML</b> and
-        <b>CSS</b>, along with some experience in <b>JavaScript</b> for building
-        web projects. I have also studied <b>low-level programming</b> concepts
-        such as <b>memory allocation</b> and <b>pointers</b> using <b>C</b>,
-        which has helped me develop a deeper understanding of how software works
-        at a fundamental level. Currently, I am part of a <b>startup</b> where I
-        work as a <b>Backend Developer</b> using <b>Spring Boot (Java)</b>.
-        Alongside backend development, I am actively learning
-        <b>machine learning</b> concepts using <b>Python</b> and exploring how
-        <b>intelligent systems</b> can be built to solve real-world problems.
-      </p>
+      <div class="about-grid">
+        <div class="about-text reveal-up" style="--d: 0.2s">
+          <p>
+            My background in
+            <strong>Electrical Engineering at HBTU Kanpur</strong> trained me to
+            think in systems — which is exactly how I approach software.
+            Studying <strong>memory allocation and pointers in C</strong> early
+            gave me a clear picture of how software behaves at the metal, not
+            just the surface.
+          </p>
+          <p>
+            That foundation translates directly into my work as a
+            <strong>Backend Developer at a startup</strong>, where I build and
+            ship production systems using <strong>Spring Boot</strong>. Writing
+            real code under real constraints teaches things no classroom does.
+          </p>
+          <p>
+            Now I'm extending that depth into
+            <strong>machine learning</strong> — not to follow a trend, but
+            because the most interesting problems sit at the intersection of
+            <strong
+              >robust backend infrastructure and intelligent systems</strong
+            >. That's the space I'm building toward.
+          </p>
+        </div>
+        <div class="about-stats reveal-up" style="--d: 0.3s">
+          <div class="stat-card">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">12+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">1st</span>
+            <span class="stat-label">Year Student</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">ML</span>
+            <span class="stat-label">Focus Area</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- SKILLS -->
+    <section id="skills" class="skills-section">
+      <div class="section-label reveal-up">02 / Skills</div>
+      <h2 class="sectionTitle reveal-up" style="--d: 0.1s">Tech Stack</h2>
 
-    <div id="skills">
-      <h2 class="sectionTitle">Skills</h2>
-
-      <div class="skillsContainer">
-        <div class="skill reveal">
-          <i class="fa-brands fa-js"></i>
-          <p>JavaScript</p>
-        </div>
-
-        <div class="skill reveal">
-          <i class="fa-brands fa-python"></i>
-          <p>Python</p>
-        </div>
-
-        <div class="skill reveal">
-          <i class="fa-brands fa-java"></i>
-          <p>Java</p>
-        </div>
-
-        <div class="skill reveal">
-          <i class="fa-solid fa-database"></i>
-          <p>MySQL</p>
+      <!-- Languages -->
+      <div class="skill-category reveal-up" style="--d: 0.1s">
+        <h4 class="skill-category-label">Languages</h4>
+        <div class="skillsContainer">
+          <div class="skill-card reveal-up" style="--d: 0.1s">
+            <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+            <p>Python</p>
+          </div>
+          <div class="skill-card reveal-up" style="--d: 0.15s">
+            <div class="skill-icon"><i class="fa-brands fa-java"></i></div>
+            <p>Java</p>
+          </div>
+          <div class="skill-card reveal-up" style="--d: 0.2s">
+            <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+            <p>JavaScript</p>
+          </div>
+          <div class="skill-card reveal-up" style="--d: 0.25s">
+            <div class="skill-icon skill-icon-text">C</div>
+            <p>C Language</p>
+          </div>
         </div>
       </div>
-    </div>
+
+      <!-- ML / Data Science -->
+      <div class="skill-category reveal-up" style="--d: 0.15s">
+        <h4 class="skill-category-label">ML &amp; Data Science</h4>
+        <div class="skillsContainer">
+          <div class="skill-card reveal-up" style="--d: 0.1s">
+            <div class="skill-icon skill-icon-img">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+                alt="NumPy"
+              />
+            </div>
+            <p>NumPy</p>
+          </div>
+          <div class="skill-card reveal-up" style="--d: 0.15s">
+            <div class="skill-icon skill-icon-img">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+                alt="Pandas"
+              />
+            </div>
+            <p>Pandas</p>
+          </div>
+          <div class="skill-card reveal-up" style="--d: 0.2s">
+            <div class="skill-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <p>Matplotlib</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Development -->
+      <div class="skill-category reveal-up" style="--d: 0.2s">
+        <h4 class="skill-category-label">Web Development</h4>
+        <div class="skillsContainer">
+          <div class="skill-card reveal-up" style="--d: 0.1s">
+            <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+            <p>HTML5</p>
+          </div>
+          <div class="skill-card reveal-up" style="--d: 0.15s">
+            <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <p>CSS3</p>
+          </div>
+          <div class="skill-card reveal-up" style="--d: 0.2s">
+            <div class="skill-icon skill-icon-img">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                alt="Spring Boot"
+              />
+            </div>
+            <p>Spring Boot</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Databases -->
+      <div class="skill-category reveal-up" style="--d: 0.25s">
+        <h4 class="skill-category-label">Databases</h4>
+        <div class="skillsContainer">
+          <div class="skill-card reveal-up" style="--d: 0.1s">
+            <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+            <p>MySQL</p>
+          </div>
+          <div class="skill-card reveal-up" style="--d: 0.15s">
+            <div class="skill-icon"><i class="fa-solid fa-table"></i></div>
+            <p>SQL</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- PROJECTS -->
-
-    <section id="projects">
-      <h2 class="sectionTitle">Projects</h2>
+    <section id="projects" class="projects-section">
+      <div class="section-label reveal-up">03 / Work</div>
+      <h2 class="sectionTitle reveal-up" style="--d: 0.1s">
+        Selected Projects
+      </h2>
 
       <div class="projectsContainer">
-        <div class="projectCard reveal">
-          <img src="Pokemon.jpeg" alt="Percepta" />
-
-          <h3>Percepta</h3>
-
-          <p>---</p>
-
-          <div class="projectLinks">
-            <a
-              href="https://github.com/TanishqJain2006/Percepta-Vision-Speech-Based-Assistant-System-"
-              >GitHub</a
-            >
-            <a href="#">Live Demo</a>
+        <div class="projectCard reveal-up" style="--d: 0.1s">
+          <div class="project-img-wrap">
+            <img src="Pokemon.jpeg" alt="Percepta" />
+            <div class="project-img-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h3>Percepta</h3>
+            <p>Vision & speech-based intelligent assistant system.</p>
+            <div class="projectLinks">
+              <a
+                href="https://github.com/TanishqJain2006/Percepta-Vision-Speech-Based-Assistant-System-"
+                class="proj-link"
+              >
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a href="#" class="proj-link proj-link-demo">Live Demo ↗</a>
+            </div>
           </div>
         </div>
 
-        <div class="projectCard reveal">
-          <img src="Rock Paper Scissors.jpeg" alt="Matrix Operations" />
-
-          <h3>Matrix Operations</h3>
-
-          <p>---</p>
-
-          <div class="projectLinks">
-            <a href="https://github.com/prakhar122808/matrix_operations">
-              GitHub
-            </a>
-            <a href="https://matrix-operations.netlify.app/"> Live Demo </a>
+        <div class="projectCard reveal-up" style="--d: 0.2s">
+          <div class="project-img-wrap">
+            <img src="Rock Paper Scissors.jpeg" alt="Matrix Operations" />
+            <div class="project-img-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h3>Matrix Operations</h3>
+            <p>Interactive matrix computation tool built for the web.</p>
+            <div class="projectLinks">
+              <a
+                href="https://github.com/prakhar122808/matrix_operations"
+                class="proj-link"
+              >
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a
+                href="https://matrix-operations.netlify.app/"
+                class="proj-link proj-link-demo"
+                >Live Demo ↗</a
+              >
+            </div>
           </div>
         </div>
 
-        <div class="projectCard reveal">
-          <img src="Tic Tac Toe.jpeg" alt="TeachMeBuddy" />
-
-          <h3>TeachMeBuddy</h3>
-
-          <p>---</p>
-
-          <div class="projectLinks">
-            <a href="#">GitHub</a>
-            <a href="#">Live Demo</a>
+        <div class="projectCard reveal-up" style="--d: 0.3s">
+          <div class="project-img-wrap">
+            <img src="Tic Tac Toe.jpeg" alt="TeachMeBuddy" />
+            <div class="project-img-overlay"></div>
+          </div>
+          <div class="project-body">
+            <h3>TeachMeBuddy</h3>
+            <p>An intelligent learning companion application.</p>
+            <div class="projectLinks">
+              <a href="#" class="proj-link">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a href="#" class="proj-link proj-link-demo">Live Demo ↗</a>
+            </div>
           </div>
         </div>
       </div>
@@ -164,15 +300,21 @@
 
     <footer>
       <div class="footerContainer">
-        <p>Prakhar Mishra</p>
-
+        <div class="footer-brand">
+          <span class="footer-logo">PM<span class="logo-dot">.</span></span>
+          <p>Machine Learning Enthusiast</p>
+        </div>
         <div class="footerLinks">
           <a href="#home">Home</a>
           <a href="#projects">Projects</a>
           <a href="contact.html">Contact</a>
         </div>
+        <div class="footer-copy">
+          <p>© 2026 Prakhar Mishra</p>
+        </div>
       </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

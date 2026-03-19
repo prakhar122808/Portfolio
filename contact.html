@@ -3,98 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Contact | Prakhar Mishra</title>
-
     <link rel="stylesheet" href="style.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
   </head>
-
   <body>
+    <div class="noise-overlay"></div>
+
     <header>
       <nav id="navbar">
-        <h2 class="logo">Prakhar</h2>
-
+        <a href="index.html" class="logo">PM<span class="logo-dot">.</span></a>
         <ul class="navLinks">
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#projects">Projects</a></li>
           <li><a href="index.html#skills">Skills</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="nav-cta">Contact</a></li>
         </ul>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
     </header>
 
     <section class="contactPage">
-      <h1 class="contactTitle">Get In Touch</h1>
+      <div class="contact-hero-bg"></div>
 
-      <p class="contactSubtitle">
-        Feel free to reach out for collaboration, projects, or discussions.
-      </p>
+      <div class="contact-header reveal-up">
+        <div class="section-label">— Let's Talk</div>
+        <h1 class="contactTitle">Get In <em>Touch</em></h1>
+        <p class="contactSubtitle">
+          Open to collaboration, interesting projects, and meaningful conversations.
+        </p>
+      </div>
 
       <div class="contactContainer">
-        <div class="contactInfo">
-          <h3>Contact Information</h3>
+        <div class="contactInfo reveal-up" style="--d:0.2s">
+          <h3>Reach Out Directly</h3>
+          <p class="contact-info-sub">Prefer a direct line? Connect here.</p>
 
-          <p>
-            <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:prakhar2808@gmail.com"> E-mail </a>
-          </p>
+          <div class="contact-link-item">
+            <div class="contact-link-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <span class="contact-link-label">Email</span>
+              <a href="mailto:prakhar2808@gmail.com">prakhar2808@gmail.com</a>
+            </div>
+          </div>
 
-          <p>
-            <i class="fa-brands fa-github"></i>
-            <a href="https://github.com/prakhar122808">GitHub</a>
-          </p>
+          <div class="contact-link-item">
+            <div class="contact-link-icon"><i class="fa-brands fa-github"></i></div>
+            <div>
+              <span class="contact-link-label">GitHub</span>
+              <a href="https://github.com/prakhar122808">prakhar122808</a>
+            </div>
+          </div>
 
-          <p>
-            <i class="fa-brands fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/prakhar-mishra-97568a378/"
-              >LinkedIn</a
-            >
-          </p>
+          <div class="contact-link-item">
+            <div class="contact-link-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div>
+              <span class="contact-link-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/prakhar-mishra-97568a378/">Prakhar Mishra</a>
+            </div>
+          </div>
         </div>
 
-        <form class="contactForm">
-          <input type="text" placeholder="Your Name" required />
-
-          <input type="email" placeholder="Your Email" required />
-
-          <textarea placeholder="Your Message" rows="5"></textarea>
-
-          <button type="submit">Send Message</button>
+        <form class="contactForm reveal-up" style="--d:0.3s" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" placeholder=" " required />
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder=" " required />
+            <label for="email">Your Email</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" placeholder=" " rows="5" required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Send Message</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
         </form>
       </div>
     </section>
 
     <footer>
       <div class="footerContainer">
-        <div class="footerLeft">
-          <h3>Prakhar Mishra</h3>
+        <div class="footer-brand">
+          <span class="footer-logo">PM<span class="logo-dot">.</span></span>
           <p>Machine Learning Enthusiast</p>
         </div>
-
         <div class="footerLinks">
           <a href="index.html">Home</a>
           <a href="index.html#projects">Projects</a>
           <a href="contact.html">Contact</a>
         </div>
-
         <div class="footerSocial">
-          <a href="https://github.com/prakhar12280"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a href="https://www.linkedin.com/in/prakhar-mishra-97568a378/"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="mailto:prakhar2808@gmail.com"
-            ><i class="fa-solid fa-envelope"></i
-          ></a>
+          <a href="https://github.com/prakhar122808"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/prakhar-mishra-97568a378/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:prakhar2808@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
